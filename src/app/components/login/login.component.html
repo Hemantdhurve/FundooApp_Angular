@@ -1,0 +1,45 @@
+<div class="maindiv">
+    <mat-card class="cardContainer">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="innerCardbox">
+                <div class="headertxt">
+                <span class="fd">F</span>
+                <span class="uo">U</span>
+                <span class="n">N</span>
+                <span class="fd">D</span>
+                <span class="o">O</span>
+                <span class="uo">O</span>
+            </div>
+            <div class="signtxt">
+                <span >Signin Instead</span>
+            </div>
+            <div class="acctxt">
+                <span>You Your Fundoo Account</span>
+            </div>
+            <div class="fields">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="email">
+                    <mat-error>Enter Email</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="fields">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="password">
+                    <mat-error>Enter Password</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="forget">
+                <button mat-flat-button class="fgtBtn">Forgot Password?</button>
+            </div>
+            <div class="twoBtns">
+                <button mat-flat-button class="create">Create Account</button>
+                <button mat-flat-button class="next">Next</button>
+            </div>
+            
+        </div>
+    </form>
+    </mat-card>
+    
+</div>

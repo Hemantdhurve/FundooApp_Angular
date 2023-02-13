@@ -1,0 +1,92 @@
+.maindiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+.cardContainer{
+    height: 450px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+}
+.innerCardbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
+    height: 100%;
+
+}
+.headertxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.fd{
+    color:rgb(66, 133, 244);
+    font-size: 22px;
+    font-weight: 500;
+}
+.uo{
+    color: rgb(234, 67, 53);
+    font-size: 22px;
+    font-weight: 500;
+}
+.n{
+    color: rgb(251, 188, 5);
+    font-size: 22px;
+    font-weight: 500;
+}
+.o{
+    color: rgb(52, 168, 83);
+    font-size: 22px;
+    font-weight: 500;
+}
+.signtxt{
+    font-size: 20px;
+    margin-top: 18px;
+}
+.acctxt{
+    font-size: 16px;
+    margin-top: 5px;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+.forget{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.fgtBtn{
+    height: 17px;
+    padding: 0px;
+    position: relative;
+    bottom: 18px;
+    color: #1a73e8 !important;
+}
+.twoBtns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+.create{
+    color: #1a73e8 !important;
+    padding: 0px;
+}
+.next{
+    background-color: #1a73e8 !important;
+    color: aliceblue !important;
+    width: 100px;
+}
