@@ -1,1 +1,75 @@
-<p>registration works!</p>
+<div class="maindiv">
+    <mat-card class="cardContainer">
+        <div class="innerCardbox">
+            <div class="innerCardbox">
+                <div class="headertxt">
+                    <span class="fd">F</span>
+                    <span class="uo">U</span>
+                    <span class="n">N</span>
+                    <span class="fd">D</span>
+                    <span class="o">O</span>
+                    <span class="uo">O</span>
+                </div>
+                <div class="acctxt">
+                    <span>Create Your Fundoo Account</span>
+                </div>
+                <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                    <div class="firstlastfields">
+                        <div class="fields">
+                            <mat-form-field appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input matInput formControlName="firstName">
+                                <mat-error>Enter First Name</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="fields">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput formControlName="lastName">
+                                <mat-error>Enter Last Name</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="emailfield">
+                        <div class="fields">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email">
+                                <mat-error>Enter Email</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <p class="ptag">You can use letters,numbers & periods</p>
+                    <button mat-flat-button class="currentEmailBtn">Use my current email address instead</button>
+                    <div class="passwordfields">
+                        <div class="fields">
+                            <mat-form-field appearance="outline">
+                                <mat-label>New Password</mat-label>
+                                <input matInput formControlName="password">
+                                <mat-error>Enter New Password</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="fields">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput formControlName="password">
+                                <mat-error>Confirm Password</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <p class="ptag">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+                    <mat-checkbox class="checkbox">Show Password</mat-checkbox>
+                    <div class="twoBtns">
+                        <button mat-flat-button class="insteadbtn" routerLink="/login">Sign in instead</button>
+                        <button mat-flat-button class="next" type="submit">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- image section -->
+        <div class="imagebox">
+            <img src="/assets/signup.svg" class="image">
+            <p class="imgtxt">One account. All of Fundoo working for you.</p>
+        </div>
+    </mat-card>
+</div>
