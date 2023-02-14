@@ -21,6 +21,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { IconsComponent } from './components/icons/icons.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { IconsComponent } from './components/icons/icons.component';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

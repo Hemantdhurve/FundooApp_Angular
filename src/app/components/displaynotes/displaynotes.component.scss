@@ -1,21 +1,20 @@
 .mainNote{
-    border: 1px solid black;
-    height: 150px;
-    width: 250px;
+    height: 145px;
+    width: 280px;
     border-radius: 5px;
     background-color: white;
     padding: 10px;
+    border: 1px solig gray;
+    box-shadow: 1px 2px 5px gray;
 }
 .innerbox{
-    border: 1px solid black;
     height: 100%;
     font-size: large;
 }
 .titlepinbox{
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
-    height: 35px;
+    height: 40px;
     align-items: center;
     font-size: 20px;
     color: gray;
@@ -25,8 +24,11 @@
     width: 25px;
 }
 .descbox{
-    border: 1px solid black;
+    margin-top: 5px;
     height: 55px;
     display: flex;
     justify-content: flex-start;
+}
+.iconscomp{
+    margin-left: -5px;
 }

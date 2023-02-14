@@ -1,0 +1,42 @@
+<div class="mainbox">
+    <button mat-icon-button>
+        <img src="/assets/alert.svg">
+    </button>
+    <button mat-icon-button>
+        <img src="/assets/collab.svg">
+    </button>
+    <button mat-icon-button>
+        <img src="/assets/pallet.svg">
+    </button>
+    <button mat-icon-button>
+        <img src="/assets/image.svg">
+    </button>
+    <button mat-icon-button>
+        <img src="/assets/archive.svg">
+    </button>   
+    <div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-btn">
+            <img src="/assets/more.svg" >
+        </button>
+        <mat-menu #menu="matMenu">  
+          <button mat-menu-item>
+            <span>Delete Note</span>
+          </button>
+          <button mat-menu-item>
+            <span>Add label</span>
+          </button>
+          <button mat-menu-item>
+            <span>Add drawing</span>
+          </button>
+          <button mat-menu-item>
+            <span>Make a Copy</span>
+          </button>
+          <button mat-menu-item>
+            <span>Show tick boxes</span>
+          </button>
+          <button mat-menu-item>
+            <span>Copy to Google Docs</span>
+          </button>  
+        </mat-menu>
+    </div>
+</div>
