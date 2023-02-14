@@ -22,6 +22,8 @@ import {MatListModule} from '@angular/material/list';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { IconsComponent } from './components/icons/icons.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {MatMenuModule} from '@angular/material/menu';
     RegistrationComponent,
     DashboardComponent,
     DisplaynotesComponent,
-    IconsComponent
+    IconsComponent,
+    GetallnotesComponent,
+    CreatenotesComponent
   ],
   imports: [
     BrowserModule,
