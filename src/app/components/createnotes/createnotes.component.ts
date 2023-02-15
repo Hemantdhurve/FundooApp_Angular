@@ -8,7 +8,7 @@ import { NotesService } from 'src/app/services/notesservices/notes.service';
   styleUrls: ['./createnotes.component.scss']
 })
 export class CreatenotesComponent implements OnInit {
-  
+
   togglenotes: boolean = false;
   createNotesForm!: FormGroup;
   submitted: boolean = false;
@@ -34,6 +34,9 @@ export class CreatenotesComponent implements OnInit {
       let data = {
         title: this.createNotesForm.value.title,
         description: this.createNotesForm.value.description,
+        archieve:false,
+        trash:false,
+        pin:false,
       }
       this.noteservice.createNote(data).subscribe((response:any)=>{
         console.log('Notes created Successfully',response)

@@ -8,7 +8,7 @@ import { NotesService } from 'src/app/services/notesservices/notes.service';
 })
 export class GetallnotesComponent implements OnInit {
 
-  notesArray:object=[];
+  notesArray:any=[];
 
   constructor(private noteservice: NotesService) { }
   ngOnInit(): void {
@@ -20,6 +20,10 @@ export class GetallnotesComponent implements OnInit {
       console.log("Retrived all Notes", response)
       this.notesArray=response.data;
       console.log('Getting all Notes',this.notesArray)
+      this.notesArray=this.notesArray.filter((filterdata:any)=>{
+        return filterdata.trash===false && filterdata.archieve===false
+      })
+      console.log("Sorted Notes with Both values False",this.notesArray)
     })
   }
 }

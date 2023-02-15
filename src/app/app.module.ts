@@ -25,6 +25,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { ArchieveComponent } from './components/archieve/archieve.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TrashComponent } from './components/trash/trash.component';
     IconsComponent,
     GetallnotesComponent,
     CreatenotesComponent,
-    TrashComponent
+    TrashComponent,
+    ArchieveComponent
   ],
   imports: [
     BrowserModule,

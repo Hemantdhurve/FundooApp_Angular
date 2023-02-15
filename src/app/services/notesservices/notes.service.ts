@@ -1,7 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpservices/http.service';
-import { IcreateNote, IupdateTrash } from '../typeinterface';
+import { IcreateNote, IupdateTrashArchieve } from '../typeinterface';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +33,7 @@ export class NotesService {
     return this.httpservice.PostService('/Notes/Create',reqdata,true,headeroptions)
   }
 
-  updateTrash(reqdata:IupdateTrash){
+  updateTrash(reqdata:IupdateTrashArchieve){
     let headeroptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
@@ -41,5 +41,15 @@ export class NotesService {
       })
     }
     return this.httpservice.PutService('/Notes/Trash?noteId='+reqdata.noteId,reqdata,true,headeroptions)
+  }
+
+  updateArchieve(reqdata:IupdateTrashArchieve){
+    let headeroptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpservice.PutService('/Notes/Archieve?noteId='+reqdata.noteId,reqdata,true,headeroptions)
   }
 }

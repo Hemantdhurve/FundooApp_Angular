@@ -8,10 +8,13 @@ export type Iregistration = {
     email: string,
     password: string,
 }
-export type IcreateNote={
-    title:string,
-    description:string
+export type IcreateNote = {
+    title: string,
+    description: string,
+    // archieve: boolean,
+    // trash: boolean,
+    // pin: boolean
 }
-export type IupdateTrash={
-    noteId:Number
+export type IupdateTrashArchieve = {
+    noteId: Number
 }

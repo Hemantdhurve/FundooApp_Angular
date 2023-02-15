@@ -27,4 +27,12 @@ export class IconsComponent implements OnInit {
     })
   }
 
+  updateArchieve(){
+    let data = {
+      noteId: this.iconsData.noteId
+    }
+    this.noteservice.updateArchieve(data).subscribe((response: any) => {
+      console.log("Notes moved to Archieve", response)
+    })
+  }
 }
