@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class CreatenotesComponent {
 
+  togglenotes:boolean=false;
+
+  takenote1(){
+    this.togglenotes=true
+  }
+
+  closeButton(){
+    this.togglenotes=false
+  }
 }
