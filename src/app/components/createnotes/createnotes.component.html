@@ -1,42 +1,45 @@
-<div class="notebox1">
-    <div class="inputbox">
-        <input type="text" class="input" placeholder="Take a note...">
-    </div>
-    <div class="imgs">
-        <button mat-icon-button>
-            <img src="/assets/check.svg">
-        </button>
-        <button mat-icon-button>
-            <img src="/assets/brush.svg">
-        </button>
-        <button mat-icon-button>
-            <img src="/assets/image.svg">
-        </button>            
-    </div>  
-</div>
-<div class="notebox2">
-    <div class="boxtitle">
-        <div class="inputbox2">
-            <input type="text" class="inputtitle" placeholder="Title">
-        </div>
-        <div>
-            <button mat-icon-button>
-                <img src="/assets/pin.svg">
-            </button>  
+<div class="container">
+    <div class="box1">
+        <div class="notebox1">
+            <div class="inputbox">
+                <input type="text" class="input" placeholder="Take a note...">
+            </div>
+            <div class="imgs">
+                <button mat-icon-button>
+                    <img src="/assets/check.svg">
+                </button>
+                <button mat-icon-button>
+                    <img src="/assets/brush.svg">
+                </button>
+                <button mat-icon-button>
+                    <img src="/assets/image.svg">
+                </button>
+            </div>
         </div>
     </div>
-    <div class="boxdesc">
-        <textarea name="text" placeholder="Take a note" class="txtareabox"></textarea>
-    </div>
-    <div class="iconclosebtn">
-        <div class="icons">
-            <app-icons></app-icons>
+    <div class="box1">
+        <div class="notebox2">
+            <div class="boxtitle">
+                <div class="inputbox2">
+                    <input type="text" class="inputtitle" placeholder="Title">
+                </div>
+                <div>
+                    <button mat-icon-button>
+                        <img src="/assets/pin.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="boxdesc">
+                <textarea name="text" placeholder="Take a note" class="txtareabox"></textarea>
+            </div>
+            <div class="iconclosebtn">
+                <div class="icons">
+                    <app-icons></app-icons>
+                </div>
+                <div class="closebtn">
+                    <button mat-flat-button>Close</button>
+                </div>
+            </div>
         </div>
-        <div class="closebtn">
-            <button mat-flat-button>Close</button>
-        </div>
     </div>
-    
-    
-    
 </div>

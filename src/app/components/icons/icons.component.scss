@@ -1,6 +1,7 @@
 .mainbox{
     margin-top: 5px;
-    width: 280px;
+    min-width: 280px;
+    max-width: 500px;
     display: flex;
     justify-content: space-between;
 }

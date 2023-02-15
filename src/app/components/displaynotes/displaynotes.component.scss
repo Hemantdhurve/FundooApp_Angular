@@ -1,11 +1,20 @@
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin-top: 30px;
+}
 .mainNote{
-    height: 145px;
+    min-height: 105px;
+    max-height: 500px;
     width: 280px;
     border-radius: 5px;
     background-color: white;
     padding: 10px;
-    border: 1px solig gray;
-    box-shadow: 1px 2px 5px gray;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 2px gray;    
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
 .innerbox{
     height: 100%;
@@ -25,7 +34,7 @@
 }
 .descbox{
     margin-top: 5px;
-    height: 55px;
+    height: 35px;
     display: flex;
     justify-content: flex-start;
 }

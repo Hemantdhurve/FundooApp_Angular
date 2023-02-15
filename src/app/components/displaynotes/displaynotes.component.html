@@ -1,12 +1,16 @@
-<div class="mainNote">     
-    <div class="innerbox">
+<div class="display">
+
+
+<div class="mainNote" *ngFor="let notes of displayNotes">     
+    <div class="innerbox" >
         <div class="titlepinbox">
-            Title
+            {{notes.title}}
             <img class="img" src="/assets/pin.svg">
         </div>
-        <div class="descbox"> Description </div>
+        <div class="descbox"> {{notes.description}} </div>
         <div class="iconscomp">
             <app-icons></app-icons>
         </div>
     </div> 
+</div>
 </div>
