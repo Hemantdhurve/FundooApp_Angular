@@ -1,6 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpservices/http.service';
+import { IcreateNote } from '../typeinterface';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,15 @@ export class NotesService {
       })
     }
     return this.httpservice.GetService('/Notes/RetrieveAll', true, headeroptions)
+  }
+
+  createNote(reqdata:IcreateNote){
+    let headeroptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpservice.PostService('/Notes/Create',reqdata,true,headeroptions)
   }
 }

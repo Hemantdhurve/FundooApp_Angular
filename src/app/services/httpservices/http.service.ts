@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Ilogin, Iregistration } from '../typeinterface';
+import { IcreateNote, Ilogin, Iregistration } from '../typeinterface';
 
 
 @Injectable({
@@ -11,7 +11,7 @@ export class HttpService {
   baseurl='https://localhost:44395/api';
   constructor(private httpclient:HttpClient) { }
 
-  PostService(url: string, reqdata: Ilogin | Iregistration,token:boolean=false,httpOptions:any){
+  PostService(url: string, reqdata: Ilogin | Iregistration |IcreateNote,token:boolean=false,httpOptions:any){
     return this.httpclient.post(this.baseurl+url,reqdata,token && httpOptions)
   }
 

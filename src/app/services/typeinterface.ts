@@ -8,3 +8,7 @@ export type Iregistration = {
     email: string,
     password: string,
 }
+export type IcreateNote={
+    title:string,
+    description:string
+}
