@@ -12,3 +12,6 @@ export type IcreateNote={
     title:string,
     description:string
 }
+export type IupdateTrash={
+    noteId:Number
+}

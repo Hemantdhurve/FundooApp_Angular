@@ -19,7 +19,7 @@
             <img src="/assets/more.svg" >
         </button>
         <mat-menu #menu="matMenu">  
-          <button mat-menu-item>
+          <button mat-menu-item (click)="updateTrash()">
             <span>Delete Note</span>
           </button>
           <button mat-menu-item>

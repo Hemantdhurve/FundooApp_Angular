@@ -24,6 +24,7 @@ import { IconsComponent } from './components/icons/icons.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CreatenotesComponent } from './components/createnotes/createnotes.compo
     DisplaynotesComponent,
     IconsComponent,
     GetallnotesComponent,
-    CreatenotesComponent
+    CreatenotesComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,

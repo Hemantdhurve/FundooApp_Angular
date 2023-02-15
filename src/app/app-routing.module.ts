@@ -7,6 +7,7 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
 import { IconsComponent } from './components/icons/icons.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
     {path:'getallnotes',component:GetallnotesComponent},
     {path:'displaynotes',component:DisplaynotesComponent},
     {path:'createnotes',component:CreatenotesComponent},
+    {path:'trashnotes',component:TrashComponent},
   ]
 },
 {path:'icons',component:IconsComponent},

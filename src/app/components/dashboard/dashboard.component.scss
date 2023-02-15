@@ -24,6 +24,7 @@
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+
 }
 
 .search {
@@ -92,11 +93,17 @@
     cursor: pointer;
     margin-bottom: 2px;
 }
+.icontxt:hover{
+    background-color: #feefc3;
+    border-radius: 0px 20px 20px 0px;
+}
 .sidenavicon{
     height: 28px;
+    // background-color: #feefc3;
 }
 .sidenavtxt{
     margin-left: 10px;
+    cursor: pointer;
 }
 
 //router rendering

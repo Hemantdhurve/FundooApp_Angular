@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IcreateNote, Ilogin, Iregistration } from '../typeinterface';
+import { IcreateNote, Ilogin, Iregistration, IupdateTrash } from '../typeinterface';
 
 
 @Injectable({
@@ -17,5 +17,9 @@ export class HttpService {
 
   GetService(url: string,token:boolean=false,httpOptions:any){
     return this.httpclient.get(this.baseurl+url,token && httpOptions)
+  }
+
+  PutService(url: string, reqdata:IupdateTrash,token:boolean=false,httpOptions:any){
+    return this.httpclient.put(this.baseurl+url,reqdata,token && httpOptions)
   }
 }
