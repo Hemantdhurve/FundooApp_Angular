@@ -1,7 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpservices/http.service';
-import { IcreateNote, IupdateTrashArchieve } from '../typeinterface';
+import { IaddLabel, IcreateNote, IupdateTrashArchieve } from '../typeinterface';
 
 @Injectable({
   providedIn: 'root'
@@ -52,4 +52,17 @@ export class NotesService {
     }
     return this.httpservice.PutService('/Notes/Archieve?noteId='+reqdata.noteId,reqdata,true,headeroptions)
   }
+
+  //label
+  
+  // addLabel(reqdata:IaddLabel){
+  //   let headeroptions = {
+  //     headers: new HttpHeaders({
+  //       'Content-type': 'application/json',
+  //       'Authorization': 'Bearer ' + this.token
+  //     })
+  //   }
+  //   return this.httpservice.PostService('/Label/Create?notesId='+ reqdata.noteId+'7&labelName='+reqdata.labelName,reqdata,true,headeroptions)
+  // }
+
 }

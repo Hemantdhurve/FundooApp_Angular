@@ -18,3 +18,7 @@ export type IcreateNote = {
 export type IupdateTrashArchieve = {
     noteId: Number
 }
+export type IaddLabel = {
+    // noteId: Number,
+    labelName:string
+}

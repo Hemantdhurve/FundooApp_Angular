@@ -45,9 +45,13 @@
                         <img src="/assets/notify.svg" class="sidenavicon">
                         <mat-list-item role="listitem" class="sidenavtxt" style="cursor: pointer;">Remainder</mat-list-item>
                     </div>
+                    <div *ngFor="let label of labelArray" class="icontxt" >
+                        <img src="/assets/labeltilted.svg" class="sidenavicon" >
+                        <mat-list-item role="listitem" class="sidenavtxt" style="cursor: pointer;" (click)="getlabelById(label.labelId)">{{label.labelName}}</mat-list-item>
+                      </div>
                     <div class="icontxt">
                         <img src="/assets/pen.svg" class="sidenavicon">
-                        <mat-list-item role="listitem" class="sidenavtxt" style="cursor: pointer;">Edit Label</mat-list-item>
+                        <mat-list-item role="listitem" class="sidenavtxt" style="cursor: pointer;" (click)="openDialog()">Edit Label</mat-list-item>
                     </div>
                     <div class="icontxt">
                         <img src="/assets/archive.svg" class="sidenavicon">

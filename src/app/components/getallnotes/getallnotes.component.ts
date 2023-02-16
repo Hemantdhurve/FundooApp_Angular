@@ -26,4 +26,5 @@ export class GetallnotesComponent implements OnInit {
       console.log("Sorted Notes with Both values False",this.notesArray)
     })
   }
+ 
 }

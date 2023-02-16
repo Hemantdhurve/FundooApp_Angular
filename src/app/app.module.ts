@@ -26,6 +26,8 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchieveComponent } from './components/archieve/archieve.component';
+import { EditdialoglabelComponent } from './components/editdialoglabel/editdialoglabel.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { ArchieveComponent } from './components/archieve/archieve.component';
     GetallnotesComponent,
     CreatenotesComponent,
     TrashComponent,
-    ArchieveComponent
+    ArchieveComponent,
+    EditdialoglabelComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { ArchieveComponent } from './components/archieve/archieve.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
