@@ -19,6 +19,13 @@ export type IupdateTrashArchieve = {
     noteId: Number
 }
 export type IaddLabel = {
-    // noteId: Number,
+    noteId: Number,
     labelName:string
+}
+export type IupdateLabel = {
+    noteId: Number,
+    labelName:string
+}
+export type IdeleteLabel = {
+    labelId: Number,
 }

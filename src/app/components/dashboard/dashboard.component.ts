@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit{
   mobileQuery: MediaQueryList;
   labelArray:any=[];
   labelName:string='';
+  label:any;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
@@ -31,15 +32,7 @@ export class DashboardComponent implements OnInit{
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  //Dialog box
-
-  openDialog() {
-    const dialogRef = this.dialog.open(EditdialoglabelComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
+ 
   //getall Labels API
   getallLabels(){
     this.labelservice.getallLabels().subscribe((response:any)=>{
@@ -53,6 +46,29 @@ export class DashboardComponent implements OnInit{
       console.log("Get Label by Id",response);
       
     })
+  }
+
+  // addLabel(){
+  //   let data={
+  //     noteId:this.labelArray.noteId,
+  //     labelName:this.labelName
+  //   }
+  //   console.log(data);  
+  //   this.labelservice.addLabel(data).subscribe((response:any)=>{
+  //     console.log('Label Added',response)
+  //     this.getallLabels();
+  //   })
+  // }
+   //Dialog box
+
+   openDialog(noteObj:any) {
+    const dialogRef = this.dialog.open(EditdialoglabelComponent,{
+      data:noteObj
+    })
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

@@ -22,15 +22,15 @@
             </button>
         </div>
     </div>
-    <div class="addedlabels">
-        <div class="singlelbl">
+    <div class="addedlabels" >
+        <div class="singlelbl" *ngFor="let label of labelArray">
             <div class="withhover">
-                <button mat-icon-button >
+                <button mat-icon-button (click)="deleteLabel(label.labelId)">
                     <img id="button" src="/assets/trash.svg">
                 </button>
             </div>           
-            <div class="inpbox">
-                <input class="inputlbl" matInput placeholder="Label">
+            <div class="inpbox" >
+                <input class="inputlbl" matInput [(ngModel)]="label.labelName">
             </div>
             <button mat-icon-button *ngIf='editdeletetoggle==true' (click)="reverse()">
                 <img id="button" src="/assets/right.svg"  />

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IaddLabel, IcreateNote, Ilogin, Iregistration, IupdateTrashArchieve } from '../typeinterface';
+import { IaddLabel, IcreateNote, IdeleteLabel, Ilogin, Iregistration, IupdateLabel, IupdateTrashArchieve } from '../typeinterface';
 
 
 @Injectable({
@@ -19,7 +19,10 @@ export class HttpService {
     return this.httpclient.get(this.baseurl+url,token && httpOptions)
   }
 
-  PutService(url: string, reqdata:IupdateTrashArchieve,token:boolean=false,httpOptions:any){
+  PutService(url: string, reqdata:IupdateTrashArchieve | IupdateLabel,token:boolean=false,httpOptions:any){
     return this.httpclient.put(this.baseurl+url,reqdata,token && httpOptions)
+  }
+  DeleteService(url: string,token:boolean=false,httpOptions:any){
+    return this.httpclient.delete(this.baseurl+url,token && httpOptions)
   }
 }
