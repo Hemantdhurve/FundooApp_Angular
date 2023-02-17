@@ -1,42 +1,60 @@
 <div class="mainbox">
-    <button mat-icon-button>
-        <img src="/assets/alert.svg">
+  <button mat-icon-button>
+    <img src="/assets/alert.svg">
+  </button>
+  <button mat-icon-button>
+    <img src="/assets/collab.svg">
+  </button>
+  <button mat-icon-button>
+    <img src="/assets/pallet.svg">
+  </button>
+  <button mat-icon-button>
+    <img src="/assets/image.svg">
+  </button>
+  <button mat-icon-button (click)="updateArchieve()">
+    <img src="/assets/archive.svg">
+  </button>
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-btn">
+      <img src="/assets/more.svg">
     </button>
-    <button mat-icon-button>
-        <img src="/assets/collab.svg">
-    </button>
-    <button mat-icon-button>
-        <img src="/assets/pallet.svg">
-    </button>
-    <button mat-icon-button>
-        <img src="/assets/image.svg">
-    </button>
-    <button mat-icon-button (click)="updateArchieve()">
-        <img src="/assets/archive.svg">
-    </button>   
-    <div>
-        <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-btn">
-            <img src="/assets/more.svg" >
-        </button>
-        <mat-menu #menu="matMenu">  
-          <button mat-menu-item (click)="updateTrash()">
-            <span>Delete Note</span>
-          </button>
-          <button mat-menu-item>
-            <span>Add label</span>
-          </button>
-          <button mat-menu-item>
-            <span>Add drawing</span>
-          </button>
-          <button mat-menu-item>
-            <span>Make a Copy</span>
-          </button>
-          <button mat-menu-item>
-            <span>Show tick boxes</span>
-          </button>
-          <button mat-menu-item>
-            <span>Copy to Google Docs</span>
-          </button>  
-        </mat-menu>
-    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="updateTrash()">
+        <span>Trash Note</span>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="labelMenu">
+        <span>Add label</span>
+      </button>
+      <mat-menu #labelMenu="matMenu">
+        <div class="labelmenuBox">
+          <span class="lbl">Label note</span>
+          <div class="inputimgbox">
+            <input matInput placeholder="Enter label name" [(ngModel)]="labelName" class="inpfield">
+            <img src="/assets/search.svg" class="imgsrch">
+          </div>
+          <div *ngFor="let label of labelArray">
+              <mat-checkbox>{{label.labelName}}</mat-checkbox>
+          </div>
+        </div>
+        <mat-dialog-actions class="donebtn">
+          <button mat-button cdkFocusInitial>done</button>
+        </mat-dialog-actions>
+      </mat-menu>
+
+
+      <button mat-menu-item>
+        <span>Delete Note</span>
+      </button>
+      <button mat-menu-item>
+        <span>Make a Copy</span>
+      </button>
+      <button mat-menu-item>
+        <span>Show tick boxes</span>
+      </button>
+      <button mat-menu-item>
+        <span>Copy to Google Docs</span>
+      </button>
+    </mat-menu>
+
+  </div>
 </div>

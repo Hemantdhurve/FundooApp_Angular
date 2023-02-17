@@ -18,8 +18,8 @@ export class EditdialoglabelComponent implements OnInit {
 
   constructor(private labelservice: LabelService, public dialogRef: MatDialogRef<EditdialoglabelComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
-      console.log(data);
-    this.noteId = data?.noteId,
+
+      this.noteId = data?.noteId,
       this.labelName = data?.labelName
   }
 

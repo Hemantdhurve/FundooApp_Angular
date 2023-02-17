@@ -5,3 +5,51 @@
     display: flex;
     justify-content: space-between;
 }
+//
+.createbtns{
+    display: flex;
+    width: 300px;
+    height: 40px;
+}
+::ng-deep .mat-mdc-text-field-wrapper {
+    margin-top: 8px !important;
+    height:33px !important;
+    border: none !important;
+    outline: none !important;
+}
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__content {
+    padding: 2px !important;
+}
+.labelmenuBox{
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.lbl{
+    padding-left: 12px;
+}
+.inputimgbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 205px;
+    height: 25px;
+}
+.inpfield{
+    border: none;
+    outline: none;
+    padding-left: 12px;
+}
+.imgsrch{
+    width: 20px;
+    height: 20px;
+}
+.donebtn{
+    display: flex;
+    justify-content: flex-end;
+}
